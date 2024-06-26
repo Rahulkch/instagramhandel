@@ -27,16 +27,16 @@ app.use("/route",x)
 // serving the page 
 
 
-app.use(express.static(path.join(__dirname, "./frontendd/build")))
+// app.use(express.static(path.join(__dirname, "./frontendd/build")))
 
-app.get("*", (req, res) => {
-    res.sendFile(
-        path.join(__dirname, "./frontendd/build/index.html"),
-        function (err) {
-            res.status(500).send(err)
-        }
-    )
-})
+// app.get("*", (req, res) => {
+//     res.sendFile(
+//         path.join(__dirname, "./frontendd/build/index.html"),
+//         function (err) {
+//             res.status(500).send(err)
+//         }
+//     )
+// })
 app.listen(port,() => {
     console.log("listen  or ye terminal m chale ga ",port)
 })
